@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/tailwind.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
-    <title>Crowd Source Chronicles</title>
-</head>
-<div class="wrapper">
-  <header>
-    <h1 class="has-text-black px-3 py-3 has-text-weight-bold">technically speaking: a tech blog</h1>
-    
 
-    
-    
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tech Blog</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+</head>
+
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
       <div class="container flex flex-wrap items-center justify-between mx-auto">
         <a href="/" class="flex items-center">
@@ -49,33 +42,16 @@
       </div>
     </nav>
 
-
-  </header>
-
-  <main>
-    {{{ body }}}
+  <main class="col-auto">
+    {{{body}}}
   </main>
 
-  <footer class="footer rows pb-2">
-    <div class="row-is-full content has-text-centered">
-      <p>
-        <a href="/">homepage</a>
-        <a href="/dashboard/">dashboard</a>
-        <a href="/dashboard/create/">create new post</a>
-        <a href="/login/">login</a>
-      </p>
-    </div>
-    <div class="row-is-full content has-text-centered">
-      <p>
-        <strong>technically speaking</strong> by <a href="https://github.com/crowdsourcechronicles/chroniclesblog">chroniclesblog</a>
-        <a href="https://github.com/crowdsourcechronicles/chroniclesblog"><i class="fab fa-github"></i></a> |
-        <a href="#"><i class="far fa-envelope"></i></a>
-      </p>
-    </div>
+  <footer class="footer flex-row justify-center">
+    <a href="/dashboard/new">➕ New Post</a>
   </footer>
-</div>
-
 </body>
+
+<script src="/js/logout.js"></script>
 
 </html>
 <script src="/js/logout.js"></script>
