@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models/');
+const withAuth = require('../utils/auth');
 
 // get all posts for homepage
 router.get('/', async (req, res) => {
@@ -57,6 +58,19 @@ router.get('/signup', (req, res) => {
   }
 
   res.render('signup');
+});
+
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    const profileData = await User.findByPk(req.session.userId);
+
+    const profile = profileData.get({ plain: true });
+
+    res.render('profile', { profile }
+    );
+  } catch (err) {
+    res.redirect('login');
+  }
 });
 
 module.exports = router;
