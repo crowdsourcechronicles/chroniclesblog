@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/tailwind.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="./css/tailwind.css">
+    {{!-- <link rel="stylesheet" href="./css/style.css"> --}}
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Crowd Source Chronicles</title>
 </head>
+
+<section class="relative py-24 px-4">
+  <div class="z-20 relative text-white container mx-auto">
+    <h1 class="mb-4 text-3xl">Crowd Source Chronicles</h1>
+    <p class="leading-normal">"Our site is the go-to destination for meaningful discussions on a wide range of topics.</p>
+    <p class="leading-normal">With a highly engaged community and a user-friendly interface, you'll always find something interesting to read or contribute to. Whether you're looking to learn something new or share your knowledge with others, our forum has something for everyone."</p>
+    <a href="/login" class="inline-block bg-blue-500 text-white no-underline hover:bg-blue-800 mt-4 p-4 rounded">Get Started!</a>
+  </div>
+  <div class="absolute inset-0 h-auto z-10">
+    <img src="https://assets.euromoneydigital.com/dims4/default/df554a8/2147483647/strip/true/crop/2000x1333+0+0/resize/840x560!/quality/90/?url=http%3A%2F%2Feuromoney-brightspot.s3.amazonaws.com%2F86%2F03%2Fe09b48b54c26a7de190f85b76de2%2Fshadesofgreen.jpg" alt="abstract green background" class="h-full w-full object-fit-cover">
+  </div>
+</section>
+
 <div class="wrapper">
   <header>
-    <h1 class="has-text-black px-3 py-3 has-text-weight-bold">technically speaking: a tech blog</h1>
+    
     
 
     
     
-    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <nav class="bg-gray-200 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
       <div class="container flex flex-wrap items-center justify-between mx-auto">
         <a href="/" class="flex items-center">
             <img src="./assets/logo.png" class="h-6 mr-3 sm:h-9" alt="Crowdsource Logo" />
@@ -48,8 +64,7 @@
         </div>
       </div>
     </nav>
-
-
+  
   </header>
 
   <main>
@@ -61,8 +76,7 @@
       <p>
         <a href="/">homepage</a>
         <a href="/dashboard/">dashboard</a>
-        <a href="/dashboard/create/">create new post</a>
-        <a href="/login/">login</a>
+        <a href="/login">login</a>
       </p>
     </div>
     <div class="row-is-full content has-text-centered">

@@ -46,4 +46,24 @@ router.get('/edit/:id', withAuth, async (req, res) => {
   }
 });
 
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    const profileData = await User.findByPk(req.params.id);
+
+    if (profileData) {
+      const profile = profileData.get({ plain: true });
+
+      res.render('profile', {
+        layout: 'dashboard',
+        profile,
+      });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.redirect('login');
+  }
+});
+
+
 module.exports = router;
