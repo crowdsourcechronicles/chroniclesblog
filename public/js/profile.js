@@ -20,12 +20,24 @@ fileForm.addEventListener('submit', (e) => {
     .then((data) => {
       if (data.secure_url !== '') {
         const uploadedFileUrl = data.secure_url;
+        localStorage.setItem('uploadedFileUrl', uploadedFileUrl);
         const imgUrl = document.querySelector('#profile-img');
         imgUrl.src = uploadedFileUrl;
       }
     })
     .catch(err => console.error(err));
 });
+
+const imgUrl = document.querySelector('#profile-img');
+const storedUrl = localStorage.getItem('uploadedFileUrl');
+if (storedUrl) {
+  imgUrl.src = storedUrl;
+}
+
+
+
+
+
 
 
 
