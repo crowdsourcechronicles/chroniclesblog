@@ -9,5 +9,24 @@
     "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
     "sequelize": "^6.28.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "chroniclesblog",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crowdsourcechronicles/chroniclesblog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crowdsourcechronicles/chroniclesblog/issues"
+  },
+  "homepage": "https://github.com/crowdsourcechronicles/chroniclesblog#readme"
 }
