@@ -6,7 +6,7 @@ class Post extends Model {}
 Post.init(
   {
     title: DataTypes.STRING,
-    body: DataTypes.STRING
+    body: DataTypes.STRING(1234)
   },
   {
     sequelize
