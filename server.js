@@ -3,6 +3,7 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const helpers = require("./utils/helpers");
 const path = require("path");
+const cloudinary = require('cloudinary').v2;
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -27,13 +28,22 @@ const sess = {
 
 app.use(session(sess));
 
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
+
 const hbs = exphbs.create({ helpers });
 
 app.engine("handlebars", hbs.engine);
+// app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "handlebars");
 
+
+
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(require('./controllers/'));
